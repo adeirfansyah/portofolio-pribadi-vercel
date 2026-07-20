@@ -17,3 +17,78 @@
 
 
 
+
+/* Tampilan foto profil berbentuk lingkaran */
+.portrait {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.photoFrame {
+  position: relative;
+  width: min(100%, 500px);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 10px solid var(--forest);
+  border-radius: 50%;
+  background: var(--forest);
+  box-shadow: 0 24px 60px rgba(23, 62, 51, 0.2);
+}
+
+.photoFrame img {
+  object-fit: cover;
+  object-position: 55% 46%;
+  transform: scale(1.25);
+  transform-origin: 55% 46%;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  text-align: center;
+}
+
+.name b {
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+@media (max-width: 640px) {
+  .portrait {
+    max-width: 390px;
+    min-height: 0;
+  }
+
+  .photoFrame {
+    width: min(100%, 360px);
+    border-width: 7px;
+  }
+
+  .name {
+    margin-top: 18px;
+  }
+
+  .name b {
+    font-size: 16px;
+  }
+}
