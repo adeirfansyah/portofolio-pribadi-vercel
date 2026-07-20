@@ -92,3 +92,60 @@
     font-size: 16px;
   }
 }
+
+/* Merapikan daftar bidang keahlian */
+.expertiseGrid ul {
+  line-height: 1.5;
+}
+
+.expertiseGrid li {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.expertiseGrid li + li {
+  margin-top: 7px;
+}
+
+.expertiseGrid li::before {
+  content: "\2022";
+  flex: 0 0 auto;
+  margin-right: 0;
+  color: #7da740;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Mendekatkan judul ke daftar keahlian */
+.expertiseGrid h3 {
+  min-height: 0;
+  margin: 44px 0 14px;
+  line-height: 1.2;
+}
+
+/* Memperjelas nomor urut bidang keahlian */
+.expertiseGrid article > span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.expertiseGrid h3 {
+  margin: 26px 0 14px;
+}
+
+/* Memperbesar teks daftar dan mengurangi ruang bawah */
+.expertiseGrid ul {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.expertiseGrid li + li {
+  margin-top: 6px;
+}
+
+.expertiseGrid article {
+  min-height: 0;
+  padding-bottom: 20px;
+}
